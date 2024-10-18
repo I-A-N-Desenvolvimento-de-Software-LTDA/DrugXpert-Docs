@@ -1,8 +1,21 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from 'react';
+import { DocsThemeConfig } from 'nextra-theme-docs';
+import Image from 'next/image';
+import Logo from './public/assets/logo.png';
 
 const config: DocsThemeConfig = {
-  logo: <span><strong>DrugXpert Documentation</strong></span>,
+  logo: (
+    <span style={{ display: 'flex', alignItems: 'center' }}>
+      <Image 
+        src={Logo} 
+        alt="DrugXpert Logo" 
+        height={45}
+        width={45}  
+        style={{ marginRight: '10px' }} 
+      />
+      <strong>DrugXpert</strong>&nbsp;<span>Documentation</span>
+    </span>
+  ),
   project: {
     link: 'https://github.com/shuding/nextra-docs-template',
   },
@@ -11,8 +24,18 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Nextra Docs Template',
+    text: (
+      <>
+        &copy; {new Date().getFullYear()} DrugXpert. All rights reserved.
+      </>
+    ),
   },
-}
+};
 
-export default config
+export default config;
+
+
+
+// ![DrugXpert Interface](public/assets/logo.png)
+// ![Real-Time Preview](public/assets/molecula1.png)
+// ![Analytics Dashboard](public/assets/molecula2.png)
