@@ -1,0 +1,13 @@
+# Representation of Atoms
+
+In SMILES notation, each atom is represented by its chemical symbol (H, C, N, O, etc.). Carbon atoms can be implicit in certain contexts to simplify notation, but all other atoms need to be explicitly written.
+
+## Basic Rules
+- **Carbon (C)**: In main chains, carbon may be omitted if it is part of a simple sequence.
+- **Hydrogen (H)**: Not represented directly. The number of hydrogens on an atom is implicit based on the number of bonds.
+
+### Examples
+- **Methane (\( CH_4 \))**: Represented as **C**. The carbon is shown with its hydrogens implicit.
+- **Water (\( H_2O \))**: Represented as **O**. The oxygen is understood to have two implicit hydrogens.
+- **Ammonia (\( NH_3 \))**: Represented as **N**. The nitrogen has three implicit hydrogens.
+- **Glycine (\( NH_2CH_2COOH \))**: Represented as **NCC(=O)O**. The nitrogen and oxygen are explicitly represented, but the hydrogens attached to them are implicit.

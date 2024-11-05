@@ -1,0 +1,59 @@
+
+# SMILES Concepts and Rules
+
+The **SMILES** (Simplified Molecular Input Line Entry System) notation encodes molecular structures in a simple text-based format for efficient data storage, transfer, and computation. Below are the key concepts and rules that define SMILES.
+
+## Atoms and Element Symbols
+Atoms are represented by their symbols (C, O, N). Carbon can be implicit, while other atoms are explicit. Square brackets `[]` are used for atoms with formal charges or metals.
+
+**Examples**:
+- **Methane**: `C`
+- **Ammonia**: `N`
+- **Chlorine ion**: `[Cl-]`
+
+## Bonds
+- **Single Bonds**: Default (no symbol)
+- **Double Bonds**: `=`
+- **Triple Bonds**: `#`
+- **Aromatic Bonds**: Lowercase letters for aromatic rings (e.g., `c1ccccc1` for benzene).
+
+##  Branching
+Branches are shown with parentheses `()`.
+
+**Example**:
+- **Isopropanol**: `CC(C)O` (branch at the central carbon).
+
+## Cyclic Structures
+Cycles are indicated by matching numbers at the start and end of the ring.
+
+**Example**:
+- **Cyclohexane**: `C1CCCCC1` (1 starts and ends the ring).
+
+## Charged Atoms
+Charges are shown within square brackets, with `+` or `-` for positive/negative charges.
+
+**Examples**:
+- **Ammonium ion**: `[NH4+]`
+- **Chloride ion**: `[Cl-]`
+
+## Stereochemistry
+Chirality is specified with `@` for configuration around chiral centers.
+
+**Example**:
+- **Lactic Acid (R or S)**: `C[C@H](O)C(=O)O`.
+
+## Aromaticity
+Lowercase symbols represent aromatic atoms.
+
+**Example**:
+- **Benzene**: `c1ccccc1`.
+
+## Hydrogens
+Hydrogens are implicit unless specified within square brackets.
+
+**Example**:
+- **Methane**: `C` (implied hydrogens).
+
+---
+
+**Summary**: SMILES provides a compact way to represent molecules, capturing atom types, bonds, charges, and stereochemistry in a linear format.
