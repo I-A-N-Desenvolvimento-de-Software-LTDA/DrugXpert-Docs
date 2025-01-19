@@ -1,5 +1,6 @@
 import React from 'react';
-import { DocsThemeConfig } from 'nextra-theme-docs';
+import { DocsThemeConfig, useConfig } from 'nextra-theme-docs';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Logo from './public/assets/logo.png';
 
@@ -23,6 +24,17 @@ const config: DocsThemeConfig = {
     link: 'https://discord.com',
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  head: () => {
+    const { route } = useRouter();
+    const { title } = useConfig();
+    
+    return (
+      <>
+        <title>{title ? `${title} - DrugXpert Docs` : 'DrugXpert Docs'}</title>
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+      </>
+    );
+  },
   footer: {
     text: (
       <>
@@ -33,3 +45,4 @@ const config: DocsThemeConfig = {
 };
 
 export default config;
+
