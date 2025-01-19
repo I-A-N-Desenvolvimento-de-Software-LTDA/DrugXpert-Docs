@@ -1,6 +1,7 @@
 {
   "index": "Getting Started",
   "smiles": "SMILES Concepts and Rules",
+  "molecularFormula": "Molecular Formula",
   "about": {
     "title": "About",
     "type": "page"
